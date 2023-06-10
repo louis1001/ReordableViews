@@ -17,7 +17,6 @@ extension ReordableForEach{
                 .offset(isDragged || isOnTop ? offset : CGSize())
         }
         .highPriorityGesture(drag, including: .all)
-        
         .onAnimationCompleted(for: releaseAnimationDummy) { 
             if draggedView == nil{
                 onTopView = nil
